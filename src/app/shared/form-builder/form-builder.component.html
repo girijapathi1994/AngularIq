@@ -1,0 +1,27 @@
+<br>
+<div class="offset-sm-1 col-sm-6 offset-sm-1" *ngIf="!name; else showData">
+  <form [formGroup]="fbForm" (ngSubmit)="onSubmit()" >
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">Name:</label>
+    <div class="col-10">
+      <input class="form-control" type="text" [ngClass]="{'fberror':!fbForm.controls['name'].valid&&fbForm.controls['name'].touched }" formControlName="name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">Description:</label>
+    <div class="col-10">
+      <textarea class="form-control" [ngClass]="{'fberror':!fbForm.controls['description'].valid&&fbForm.controls['description'].touched }" formControlName="description"></textarea>
+    </div>
+  </div>
+  <div class="form-group offset-sm-4">
+      <button type="submit" class="btn btn-primary btn-sm" [disabled]="fbForm.invalid">Submit</button>
+    </div>
+
+</form>
+</div>
+<ng-template #showData>
+  <div class="form-group row">
+    <label for="example-text-input" class="offset-sm-2 col-10">Name:  {{name}}</label>
+    
+  </div>
+</ng-template>

@@ -1,0 +1,9 @@
+
+<div  [formGroup]="group">
+<div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">{{data.label}}:</label>
+    <div class="col-10">
+      <textarea class="form-control" [ngClass]="{fberror:!group.controls[data.name].valid&&group.controls[data.name].touched }" [formControlName]="data.name"></textarea>
+    </div>
+  </div>
+</div>

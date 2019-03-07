@@ -1,0 +1,6 @@
+<p class="my">
+  child works!
+  {{message}}
+  <button (click)="sendMessage()">send from parent</button>
+  <app-form [formElements]="data" [formComp]="child" (formValueSubmit)="formValues($event)"></app-form>
+</p>

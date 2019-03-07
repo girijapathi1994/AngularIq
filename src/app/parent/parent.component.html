@@ -1,0 +1,7 @@
+<p>
+ 
+  <app-child [message]="message" (messageEevnt)="receieveMessage($event)"></app-child>
+{{message1}}<br>
+  parent works!
+  <app-form [formElements]="data" [formComp]="parent" (formValueSubmit)="formValues($event)"></app-form>
+</p>

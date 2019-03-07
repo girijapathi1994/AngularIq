@@ -1,0 +1,12 @@
+<br>
+<div class="offset-sm-1 col-sm-10 offset-sm-1">
+    <form [formGroup]="fbForm" (ngSubmit)="onSubmit()" >
+  <app-text-box [data]="data[0]" [group]="fbForm"></app-text-box>
+  <app-text-box [data]="data[1]" [group]="fbForm"></app-text-box>
+  <app-text-box [data]="data[2]" [group]="fbForm"></app-text-box>
+  <app-text-area [data]="data[3]" [group]="fbForm"></app-text-area>
+  <div class="form-group offset-sm-4">
+      <button type="submit" class="btn btn-primary btn-sm" [disabled]="fbForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>
